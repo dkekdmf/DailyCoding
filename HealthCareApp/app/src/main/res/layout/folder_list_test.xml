@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFF3FB">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/layout_header"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:paddingHorizontal="23dp"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <TextView
+        android:id="@+id/text_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="폴더"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/btn_add_folder"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:src="@drawable/plusbutton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout_folder"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_header"
+        app:tabIndicatorColor="#2A394C" app:tabIndicatorHeight="3dp"
+        app:tabSelectedTextColor="#2A394C" app:tabTextColor="#B8C4D1" app:tabTextAppearance="@style/TabTextAppearance" app:tabMode="fixed">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="공유 폴더" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="개인 폴더" />
+    </com.google.android.material.tabs.TabLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E1E7EF"
+        app:layout_constraintBottom_toBottomOf="@id/tabLayout_folder" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager_folder"
+        android:layout_width="match_parent"  android:layout_height="0dp"          android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tabLayout_folder"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
