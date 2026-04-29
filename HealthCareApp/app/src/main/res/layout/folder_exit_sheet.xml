@@ -57,6 +57,7 @@
             android:layout_weight="1"
             android:background="@drawable/shape_red"
             android:text="나가기"
+            android:gravity="center"
             android:textColor="#FF4D4D"
             android:textSize="16sp"
             android:textStyle="bold" />
@@ -72,6 +73,7 @@
             android:layout_weight="1"
             android:background="@drawable/shape_dark"
             android:text="머물기"
+            android:gravity="center"
             android:textColor="#FFFFFF"
             android:textSize="16sp"
             android:textStyle="bold" />

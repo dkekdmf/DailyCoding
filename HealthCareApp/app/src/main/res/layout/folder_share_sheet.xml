@@ -47,6 +47,7 @@
         android:id="@+id/btn_copy_link"
         android:layout_width="match_parent"
         android:layout_height="60dp"
+        android:gravity="center"
         android:layout_marginTop="32dp"
         android:background="@drawable/shape_dark"
         android:text="링크 복사하기"

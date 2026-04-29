@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingVertical="10dp"
+    android:paddingHorizontal="4dp">
+
+    <!-- 세트 번호 -->
+    <TextView
+        android:id="@+id/tvSetNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:textSize="16sp"
+        android:textColor="#4A5768"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" 세트"
+        android:textSize="14sp"
+        android:textColor="#B1B8C0"
+        android:layout_marginEnd="24dp" />
+
+    <!-- KG 입력창 -->
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/etWeight"
+            android:layout_width="70dp"
+            android:layout_height="45dp"
+            android:background="@drawable/shape_button_light_gray"
+            android:gravity="center"
+            android:inputType="number"
+            android:textColor="#2D3A4B"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:hint="0" />
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" kg"
+        android:textSize="14sp"
+        android:textColor="#B1B8C0"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="8dp" />
+
+    <!-- 횟수 입력창 -->
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/etReps"
+            android:layout_width="70dp"
+            android:layout_height="45dp"
+            android:background="@drawable/shape_button_light_gray"
+            android:gravity="center"
+            android:inputType="number"
+            android:textColor="#2D3A4B"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:hint="0" />
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" 회"
+        android:textSize="14sp"
+        android:textColor="#B1B8C0"
+        android:layout_marginStart="8dp" />
+
+</LinearLayout>
