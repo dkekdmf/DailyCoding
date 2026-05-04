@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="shared">#FFEB3B</color>
+    <color name="notshared">#888888</color>
+    <color name="chip_selected">#4A5768</color> <!-- 클릭 시 배경색 -->
+    <color name="chip_unselected">#F2F4F6</color> <!-- 평소 배경색 (연한 회색) -->
+    <color name="text_unselected">#8E949A</color> <!-- 평소 글자색 -->
+    <color name="workout_bg">#F4F6F9</color> <!-- 연한 하늘색 배경 -->
+    <color name="workout_navy">#4A5768</color> <!-- 활성화된 탭/버튼 색상 -->
+    <color name="workout_gray">#B1B8C0</color> <!-- 비활성화/회색 텍스트 -->
+    <color name="workout_card_bg">#FFFFFF</color> <!-- 운동 카드 배경 -->
+</resources>

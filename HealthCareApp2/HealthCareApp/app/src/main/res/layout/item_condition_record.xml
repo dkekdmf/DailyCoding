@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- 헤더: 질문 1번 (항상 노출) -->
+        <TextView
+            android:id="@+id/tv_question_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1. 운동 후 관절/근육 통증이 있었나요?"
+            android:textColor="#2D3A4B"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/slider_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:valueFrom="1.0"
+            android:valueTo="10.0"
+            android:stepSize="1.0" />
+
+        <!-- [숨김 영역] 전체보기 클릭 시 나타남 -->
+        <LinearLayout
+            android:id="@+id/layout_extra_questions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <!-- 추가 질문 2, 3, 4번... -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="2. 현재 피로도는 어느 정도인가요?"
+                android:textStyle="bold" />
+
+            <com.google.android.material.slider.Slider
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:valueFrom="1.0"
+                android:valueTo="10.0" />
+
+            <!-- 메모/피드백 영역도 여기에 포함 가능 -->
+        </LinearLayout>
+
+        <!-- 전체보기 버튼 -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_see_all"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="12dp"
+
+            android:text="전체보기"
+            android:textColor="#94A3B8" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

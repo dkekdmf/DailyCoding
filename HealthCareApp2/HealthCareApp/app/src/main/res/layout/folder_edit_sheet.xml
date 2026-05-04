@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="340dp" android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/bottom_background1"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/btn_back_edit"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/arrow"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="폴더명 변경하기"
+            android:textColor="#2D3A4B"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/btn_close_edit"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/folder4_close"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tv_char_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="16dp"
+        android:text="3/15"
+        android:textColor="#A8AFB9"
+        android:textSize="12sp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/shape_edit_bg"
+        android:paddingHorizontal="16dp">
+        <EditText
+            android:id="@+id/et_folder_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:gravity="center_vertical"
+            android:hint="폴더명을 입력해주세요"
+            android:inputType="text"
+            android:text="고제로"
+            android:privateImeOptions="defaultInputMode=korean"
+            android:textColor="#2D3A4B"
+            android:textSize="16sp" />
+        <ImageView
+            android:id="@+id/btn_clear_text"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="end|center_vertical"
+            android:src="@drawable/is_clear_circle" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_status_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:text="한글, 영어, 숫자 혼용하여 최대 18자 이내로 입력"
+        android:textColor="#A8AFB9"
+        android:textSize="13sp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_submit_edit"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:background="@drawable/shape_dark"
+        android:text="변경하기"
+        android:textColor="#FFFFFF"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

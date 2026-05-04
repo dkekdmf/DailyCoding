@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.HealthCareApp" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="CalendarDayLayout">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+    <style name="MyTabText" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">normal</item> <!-- 일단 기본으로 설정 -->
+    </style>
+
+    <!-- 선택된 스타일: 크기는 그대로, 굵기만 변경 가능 -->
+    <style name="MyTabSelectedText" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">15sp</item> <!-- 위와 동일한 크기 입력 -->
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+    <style name="CalendarDayName">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="CustomTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="textAllCaps">false</item>
+    </style>
+    <style name="CustomSliderStyle" parent="Widget.MaterialComponents.Slider">
+        <!-- 활성화된 트랙 색상 (진한 회색/남색) -->
+        <item name="trackColorActive">#64748B</item>
+        <!-- 비활성화된 트랙 색상 (연한 회색) -->
+        <item name="trackColorInactive">#E2E8F0</item>
+        <!-- 슬라이더 손잡이(Thumb) 색상 -->
+        <item name="thumbColor">#FFFFFF</item>
+        <item name="thumbElevation">2dp</item>
+        <item name="thumbRadius">12dp</item>
+        <!-- 틱(Tick) 마크 색상 (점 형태) -->
+        <item name="tickColorActive">#475569</item>
+        <item name="tickColorInactive">#CBD5E1</item>
+        <item name="trackHeight">8dp</item>
+    </style>
+    <style name="CalendarDayNumber">
+        <item name="android:layout_width">36dp</item>
+        <item name="android:layout_height">36dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="CalendarEmoji">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+    <style name="TransparentBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/TransparentBottomSheetStyle</item>
+    </style>
+
+    <style name="TransparentBottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="WorkoutSliderStyle" parent="Widget.MaterialComponents.Slider">
+        <!-- 트랙(바) 두께와 모양 -->
+        <item name="trackHeight">12dp</item>
+        <item name="trackColorInactive">#E2E8F0</item> <!-- 연한 하늘색/회색 배경 -->
+        <item name="trackColorActive">#3B82F6</item>   <!-- 활성화된 파란색 영역 -->
+
+        <!-- 점(Tick) 디자인 -->
+        <item name="tickColorInactive">#94A3B8</item>  <!-- 비활성 점 -->
+        <item name="tickColorActive">#FFFFFF</item>    <!-- 활성 영역 위 점 -->
+
+        <!-- 엄지(Thumb) 디자인 -->
+        <item name="thumbColor">#FFFFFF</item>         <!-- 흰색 원 -->
+        <item name="thumbStrokeColor">#3B82F6</item>   <!-- 테두리 파란색 -->
+        <item name="thumbStrokeWidth">3dp</item>
+        <item name="thumbRadius">14dp</item>           <!-- 원 크기 -->
+        <item name="thumbElevation">4dp</item>         <!-- 입체감 -->
+
+        <!-- 숫자 툴팁(Label) 스타일 -->
+        <item name="labelStyle">@style/SliderLabel</item>
+    </style>
+
+    <style name="SliderLabel" parent="Widget.MaterialComponents.Tooltip">
+        <item name="android:textColor">#3B82F6</item>
+        <item name="backgroundTint">#FFFFFF</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>

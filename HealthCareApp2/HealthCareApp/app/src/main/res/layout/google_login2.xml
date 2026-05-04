@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#EFF4FB"
+    >
+    <ImageView
+        android:id="@+id/statusbar"
+        android:layout_width="412dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        android:src="@drawable/status_bar"
+        tools:ignore="MissingConstraints">
+    </ImageView>
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="나의 운동기록\n시작하기"
+            android:textSize="24sp"
+            android:textStyle="bold"
+
+            android:textColor="#000000"
+            app:layout_constraintTop_toBottomOf="@id/statusbar"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="200dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginBottom="105dp"/>
+
+        <TextView
+            android:id="@+id/sub_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="간편하게 로그인하고 운동일지를 공유해보세요"
+            android:textSize="15sp"
+            android:textColor="#8E97A4"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="24dp"
+            app:layout_constraintTop_toBottomOf="@id/title"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    <Button
+        android:id="@+id/btn_google_login"
+        android:layout_width="335dp"
+        android:layout_height="54dp"
+        android:text="Google 로그인하기"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/google_shape"
+        android:drawableStart="@drawable/google_logo"
+        android:drawablePadding="12dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toBottomOf="@id/sub_title"
+        tools:ignore="MissingConstraints" />
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="계속하면 이용약관 및\n개인정보처리방침에 동의하게 됩니다."
+        android:textSize="14sp"
+        android:textColor="#8E97A4"
+        android:gravity="center"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="계속하면 이용약관 및\n개인정보처리방침에 동의하게 됩니다."
+        android:textSize="14sp"
+        android:textColor="#8E97A4"
+        android:gravity="center"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
