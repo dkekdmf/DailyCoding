@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <!-- [상단 헤더] -->
+    <RelativeLayout
+        android:id="@+id/layout_header"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:paddingHorizontal="20dp">
+        <TextView
+            android:id="@+id/tv_condition_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="컨디션 체크 01"
+            android:textStyle="bold"
+            android:textColor="#4A5568" />
+        <ImageView
+            android:id="@+id/iv_arrow"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/arrow_down" />
+    </RelativeLayout>
+
+    <!-- [펼쳐지는 상세 영역] -->
+    <LinearLayout
+        android:id="@+id/layout_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="20dp"
+        android:paddingBottom="20dp"
+        android:visibility="visible">
+
+        <!-- 질문 카드 영역 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:strokeColor="#EDF2F7"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/tv_step_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1/5"
+                        android:textColor="#3A8DFF"
+                        android:textStyle="bold" />
+
+                    <!-- 이 버튼을 누르면 다음 질문으로! -->
+                    <ImageButton
+                        android:id="@+id/btn_next_question"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentEnd="true"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:src="@drawable/arrow_down"
+                        android:rotation="-90"
+                        app:tint="#CBD5E0" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_question_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="평소와 다른 관절/근육에 통증이 있나요?"
+                    android:textColor="#2D3748"
+                    android:textSize="17sp"
+                    android:fontFamily="@font/pretendard"
+                    />
+
+                <!-- 가이드 박스 -->
+                <TextView
+                    android:id="@+id/tv_slider_guide"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/bg_rounded_corner"
+                    android:backgroundTint="#F0F4F8"
+                    android:gravity="center"
+                    android:padding="12dp"
+                    android:text="3 - 운동 시 불편이 큼"
+                    android:textColor="#718096" />
+
+                <com.google.android.material.slider.Slider
+                    android:id="@+id/slider_pain"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:valueFrom="1.0"
+                    android:valueTo="10.0"
+                    android:value="3.0"
+                    app:thumbColor="#3A8DFF"
+                    app:trackColorActive="#3A8DFF" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/tv_min_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="매우 심함"
+                        android:textColor="#A0AEC0"
+                        android:textSize="12sp" />
+                    <TextView
+                        android:id="@+id/tv_max_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:text="통증 없음"
+                        android:textColor="#A0AEC0"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- 전체보기 버튼 -->
+        <Button
+            android:id="@+id/btn_show_all"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#F8FAFC"
+            android:text="전체보기"
+            android:textColor="#718096"
+            app:cornerRadius="12dp"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
+
+    </LinearLayout>
+</LinearLayout>
