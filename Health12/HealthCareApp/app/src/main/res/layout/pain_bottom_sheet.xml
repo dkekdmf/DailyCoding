@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_bottom_sheet"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="통증부위"
+        android:textColor="#1E293B"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/btn_close"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/folder4_close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_title" />
+
+    <LinearLayout
+        android:id="@+id/layout_direction"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/tv_title">
+
+        <TextView
+            android:id="@+id/btn_left"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/selector_tab_bg"
+            android:gravity="center"
+            android:text="좌"
+            android:textColor="@drawable/selector_tab"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/btn_right"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/selector_tab_bg"
+            android:gravity="center"
+            android:text="우"
+            android:textColor="@drawable/selector_tab"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/rg_pain_level"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/layout_direction">
+
+        <RadioButton
+            android:id="@+id/rb_level1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@drawable/select_radio_pain"
+            android:gravity="center"
+            android:text="1단계"
+            android:textColor="#FFB8B8"
+            android:textSize="13sp" />
+
+        <RadioButton
+            android:id="@+id/rb_level2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@drawable/select_radio_pain"
+            android:gravity="center"
+            android:text="2단계"
+            android:textColor="#FFB8B8"
+            android:textSize="13sp" />
+
+        <RadioButton
+            android:id="@+id/rb_level3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@drawable/select_radio_pain"
+            android:gravity="center"
+            android:text="3단계"
+            android:textColor="#FFB8B8"
+            android:textSize="13sp" />
+
+        <RadioButton
+            android:id="@+id/rb_level4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@drawable/select_radio_pain"
+            android:gravity="center"
+            android:text="4단계"
+            android:textColor="#FFB8B8"
+            android:textSize="13sp" />
+
+        <RadioButton
+            android:id="@+id/rb_level5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@drawable/select_radio_pain"
+            android:gravity="center"
+            android:text="5단계"
+            android:textColor="#FFB8B8"
+            android:textSize="13sp" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/et_pain_memo"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/shape_button_light_gray"
+        android:gravity="top"
+        android:hint="통증이 생기게 된 이유를 입력해주세요\n해당 항목은 필수 입력이 아니에요"
+        android:padding="16dp"
+        android:textColor="#1E293B"
+        android:textColorHint="#94A3B8"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@id/rg_pain_level" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_complete"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/shape_btn_dark"
+        android:text="완료"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/et_pain_memo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

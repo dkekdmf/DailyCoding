@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 선택되었을 때 (노란색 채워진 별) -->
+    <item android:drawable="@drawable/exersise_star" android:state_selected="true" />
+    <!-- 기본 상태 (비어있는 별) -->
+    <item android:drawable="@drawable/star_2" />
+</selector>
