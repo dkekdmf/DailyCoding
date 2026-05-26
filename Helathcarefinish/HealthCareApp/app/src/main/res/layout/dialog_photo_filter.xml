@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="220dp"
+    android:layout_height="100dp"
+    android:orientation="vertical"
+    android:paddingHorizontal="10dp"
+    android:paddingVertical="14dp"
+    android:background="@drawable/bg_rounded_white_shadow">
+    <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="사진"
+    android:textColor="#4A5768"
+    android:fontFamily="@font/pretendard_medium"
+    android:layout_marginBottom="13dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_filter_has_photo"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_marginEnd="4dp"
+            android:text="사진 있는"
+            android:textSize="13sp"
+            android:stateListAnimator="@null"
+            android:fontFamily="@font/pretendard_regular"
+            android:background="@drawable/bg_filter_button" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_filter_no_photo"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="사진 없는"
+            android:textSize="13sp"
+            android:stateListAnimator="@null"
+            android:fontFamily="@font/pretendard_regular"
+            android:background="@drawable/bg_filter_button" />
+    </LinearLayout>
+</LinearLayout>

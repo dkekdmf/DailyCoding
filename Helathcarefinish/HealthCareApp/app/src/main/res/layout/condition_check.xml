@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <!-- [1] 상단 고정 영역: 상태바 및 타이틀 -->
+    <ImageView
+        android:id="@+id/statusbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/status_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_title_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@id/statusbar">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pretendard_medium"
+            android:text="컨디션 체크"
+            android:textColor="#181818"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_close_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="350dp"
+
+            android:src="@drawable/ic_close"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:tint="#181818"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- [2] 스크롤 가능 영역 -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+        android:layout_marginTop="16dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_title_container">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="30dp">
+
+            <!-- 타이머 및 시간 영역 -->
+
+
+            <!-- 상태 질문 영역 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="8dp"
+                android:text="상태 질문"
+                android:fontFamily="@font/pretendard_medium"
+                android:textColor="#000000"
+                android:textSize="18sp"
+               />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_status_questions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:overScrollMode="never"
+                tools:listitem="@layout/item_condition_question" />
+
+            <!-- 통증 부위 선택 영역 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="12dp"
+                android:text="통증 부위"
+                android:textColor="#2D3A4B"
+                android:textSize="18sp"
+                android:fontFamily="@font/pretendard_medium" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:background="@drawable/bg_tab_container"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_front"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:stateListAnimator="@null"
+                    android:background="@drawable/bg_tab_selected"
+                    android:text="앞면"
+                    android:textSize="13sp"
+                    android:fontFamily="@font/pretendard_medium"
+                    android:textColor="#4A5768" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_back"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:textSize="13sp"
+                    android:stateListAnimator="@null"
+                    android:fontFamily="@font/pretendard_medium"
+                    android:background="@android:color/transparent"
+                    android:text="뒷면"
+                    android:textColor="#94A3B8" />
+            </LinearLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="16dp"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                app:strokeColor="#E1E7EE"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="none">
+
+                        <com.google.android.material.chip.ChipGroup
+                            android:id="@+id/chip_group_body"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:selectionRequired="true"
+                            app:singleSelection="true">
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/chip_head"
+                                style="@style/Widget.MaterialComponents.Chip.Choice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:text="머리/목"
+                                android:textSize="13sp"
+                                android:fontFamily="@font/pretendard_medium"
+                                android:textColor="@color/chip_text_selector"
+                                app:chipBackgroundColor="@color/chip_selector" />
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/chip_upper"
+                                style="@style/Widget.MaterialComponents.Chip.Choice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="상체"
+                                android:textSize="13sp"
+                                android:fontFamily="@font/pretendard_medium"
+                                android:textColor="@color/chip_text_selector"
+                                app:chipBackgroundColor="@color/chip_selector" />
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/chip_arm"
+                                style="@style/Widget.MaterialComponents.Chip.Choice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="팔/손"
+                                android:textSize="13sp"
+                                android:fontFamily="@font/pretendard_medium"
+                                android:textColor="@color/chip_text_selector"
+                                app:chipBackgroundColor="@color/chip_selector" />
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/chip_lower"
+                                style="@style/Widget.MaterialComponents.Chip.Choice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="하체"
+                                android:textSize="13sp"
+                                android:fontFamily="@font/pretendard_medium"
+                                android:textColor="@color/chip_text_selector"
+                                app:chipBackgroundColor="@color/chip_selector" />
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/chip_foot"
+                                style="@style/Widget.MaterialComponents.Chip.Choice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="발"
+                                android:textSize="13sp"
+                                android:fontFamily="@font/pretendard_medium"
+                                android:textColor="@color/chip_text_selector"
+                                app:chipBackgroundColor="@color/chip_selector" />
+                        </com.google.android.material.chip.ChipGroup>
+                    </HorizontalScrollView>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_body_parts"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:nestedScrollingEnabled="false"
+                        tools:listitem="@layout/item_body_part_selection" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <!-- 선택된 통증 태그 -->
+            <LinearLayout
+                android:id="@+id/layout_pain_tag_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_selected_tag"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center_vertical"
+                android:padding="12dp">
+
+                <TextView
+                    android:id="@+id/tv_pain_tag_content"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="기록된 통증이 없습니다"
+                    android:textColor="#8896A8"
+                    android:fontFamily="@font/pretendard_regular"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/ic_close"
+                    app:tint="#94A3B8" />
+            </LinearLayout>
+
+            <!-- 메모 영역 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="12dp"
+                android:text="메모/피드백"
+                android:textColor="#2D3A4B"
+                android:textSize="18sp"
+                android:fontFamily="@font/pretendard_medium"
+                 />
+
+            <EditText
+                android:id="@+id/et_feedback_memo"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginHorizontal="24dp"
+                android:background="@drawable/bg_memo_input"
+                android:gravity="top"
+                android:inputType="textMultiLine"
+                android:hint="운동을 하면서 생긴 특이사항이나 피드백을\n작성해 공유해보세요"
+                android:lineSpacingExtra="4dp"
+                android:padding="16dp"
+                android:textColor="#8896A8"
+                android:fontFamily="@font/pretendard_regular"
+                android:textColorHint="#94A3B8"
+                android:textSize="14sp" />
+
+            <!-- 작성 완료 버튼 -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_finish_workout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/complete_light_gray"
+                android:text="작성 완료"
+                android:fontFamily="@font/prendard_semilbold"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:stateListAnimator="@null"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
